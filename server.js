@@ -1,8 +1,11 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require ('body-parser');
-var db = mongoose.connect('mongodb://localhost/swag-shop');
+var db = mongoose.connect('mongodb://localhost/swag-shop', {useNewUrlParser: true, useUnifiedTopology: true});
 var app = express();
+
+var Product = require('./model/product');
+var WishList = require('./model/wishlist');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
