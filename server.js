@@ -1,0 +1,12 @@
+var express = require('express');
+var mongoose = require('mongoose');
+var bodyParser = require ('body-parser');
+var db = mongoose.connect('mongodb://localhost/swag-shop');
+var app = express();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+
+app.listen(3000, function(){
+  console.log('Swag shop API up and running on port 3000...')
+});

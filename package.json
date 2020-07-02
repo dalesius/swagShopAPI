@@ -1,0 +1,25 @@
+{
+  "name": "swagshopapi",
+  "version": "1.0.0",
+  "description": "Practice for creating an API based on MERN",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalesius/swagShopAPI.git"
+  },
+  "author": "Dalesius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalesius/swagShopAPI/issues"
+  },
+  "homepage": "https://github.com/dalesius/swagShopAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21"
+  }
+}
