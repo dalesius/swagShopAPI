@@ -16,9 +16,19 @@ app.post('/product', function(request, response){
   product.price = request.body.price;
   product.save(function(err, savedDocument){
     if (err) {
-      response.status(500).send({error:"Product couldn't be saved"});
+      response.status(500).send({error:"Product couldn't be saved."});
     } else {
       response.status(200).send(savedDocument);
+    }
+  });
+});
+
+app.get('/product', function(request, response){
+  Product.find({}, function(err, products){
+    if (err) {
+      response.status(500).send({error: "Products couldn't be retrieved."});
+    } else {
+      response.status(200).send(products);
     }
   });
 });
